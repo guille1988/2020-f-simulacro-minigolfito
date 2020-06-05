@@ -118,6 +118,15 @@ tiroSupera :: Obstaculo -> Tiro -> Bool
 tiroSupera obstaculo = (/=tiroDetenido).obstaculo
 
 palos :: Palos
-palos = [putter,madera]
+palos = [putter, madera, hierros 1, hierros 2, hierros 3, hierros 4, hierros 5 , hierros 6, hierros 7, hierros 8, hierros 9, hierros 10]
+
+--Saber, a partir de un conjunto de obstáculos y un tiro, cuántos obstáculos consecutivos se pueden superar.
+--Por ejemplo, para un tiro de velocidad = 10, precisión = 95 y altura = 0, y una lista con dos túneles con rampita 
+--seguidos de un hoyo, el resultado sería 2 ya que la velocidad al salir del segundo túnel es de 40, por ende no supera el hoyo.
+--BONUS: resolver este problema sin recursividad, teniendo en cuenta que existe 
+--una función takeWhile :: (a -> Bool) -> [a] -> [a] que podría ser de utilidad.
+
+type Obstaculos = [Obstaculo]
+
 
 
