@@ -66,20 +66,6 @@ golpe jugador palo = palo (habilidad jugador)
 
 --PUNTO 3--
 
-{-
-Lo que nos interesa de los distintos obstáculos es si un tiro puede superarlo, 
-y en el caso de poder superarlo, cómo se ve afectado dicho tiro por el obstáculo. 
-En principio necesitamos representar los siguientes obstáculos:
-Un túnel con rampita sólo es superado si la precisión es mayor a 90 yendo al ras del suelo, 
-independientemente de la velocidad del tiro. Al salir del túnel la velocidad del tiro se duplica, 
-la precisión pasa a ser 100 y la altura 0.
-Una laguna es superada si la velocidad del tiro es mayor a 80 y tiene una altura de entre 1 y 5 metros. 
-Luego de superar una laguna el tiro llega con la misma velocidad y precisión, 
-pero una altura equivalente a la altura original dividida por el largo de la laguna.
-Un hoyo se supera si la velocidad del tiro está entre 5 y 20 m/s yendo al ras del suelo con una precisión mayor a 95. 
-Al superar el hoyo, el tiro se detiene, quedando con todos sus componentes en 0.
--}
-
 type Obstaculo = (Tiro -> Tiro)
 
 tunelConRampita :: Obstaculo
@@ -116,3 +102,5 @@ hoyo tiro
  
 --PUNTO 4--
 
+--palosUtiles :: Jugador -> Obstaculo -> Palos
+--palosUtiles jugador obstaculo = 
