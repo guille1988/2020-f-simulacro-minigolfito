@@ -209,3 +209,4 @@ gano puntosDeTorneo puntosDeUnJugador
       . filter (/= puntosDeUnJugador)) puntosDeTorneo
 
 
+
